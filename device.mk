@@ -23,6 +23,9 @@ $(call inherit-product, vendor/samsung/beyond0lte/beyond0lte-vendor.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Inherit viper4android
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Fingerprint Gestures
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
