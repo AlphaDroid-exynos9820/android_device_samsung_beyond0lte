@@ -25,10 +25,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 ## Inherit from beyond0lte device
 $(call inherit-product, device/samsung/beyond0lte/device.mk)
 
+#Faceunlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 ## Boot Animation
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
+
+# Use Google Telephony pack
+TARGET_USE_GOOGLE_TELEPHONY := true
+
+#Blur
+TARGET_ENABLE_BLUR := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := true
+TARGET_DEFAULT_ADB_ENABLED := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := Mgm2023
 
 ## Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
